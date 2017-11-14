@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Attendees</title>
+  <link rel="stylesheet" href="course.css" />
+  <link href="https://fonts.googleapis.com/css?family=Barlow|Roboto" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="navigation">
+      <ul class="navigation-menu">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="topics.html">Topics</a>
+        </li>
+        <li>
+          <a href="attendees.html">Attendees</a>
+        </li>
+      </ul>
+
+      <div class="credentials">
+        <span id="first-name-cred"></span>
+        <span id="last-name-cred"></span>
+        <img id="image" />
+      </div>
+    </div>
+
+
+    <div class="content">
+
+      <h3>Topics covered</h3>
+
+      <button id='btnShowForm' class= 'action-btn' onclick="createAttendee()">Add Attendee</button>
+
+      <table id='attendee-list'>
+        <thead>
+          <tr id="h-row" class="header-row">
+            <th class="attendee-header">First Name</th>
+            <th class="attendee-header">Last Name</th>
+            <th class="attendee-header">Email</th>
+            <th class="attendee-header">Date of Birth</th>
+            <th class="attendee-header">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        <!-- <tr id="red_1" class="attendee-row">
+          <td>
+            Dragan
+          </td>
+          <td>
+            Kojic Keba
+          </td>
+          <td>
+            email@mailinator.com
+          </td>
+          <td>
+            1600
+          </td>
+          <td>
+            <button onclick="editAttendeeData">Edit</button>
+            <button onclick="deleteRow('red_1')">Delete</button>
+          </td> 
+
+        </tr>-->
+      </table>
+
+      <br>
+
+      <div id="add-attendee" style="display: none;">
+        <form id="attendeeForm">
+          <input name="attendeesid" type="hidden" class="attendee-entry" id="id-attendee" />
+          <input name="firstName" class="attendee-entry" type="text" id="first-name-entry" />
+          <input name="lastName" class="attendee-entry" type="text" id="last-name-entry" />
+          <input name="email" class="attendee-entry" type="email" id="email-entry" />
+          <input name="dateBirth" class="attendee-entry" type="date" id="date-entry" />
+
+        </form>
+        <div id='buttons'>
+          <button id="btnAdd"  class= 'action-btn' style="display: none;" onclick="postAttendee()">Add</button>
+          <button id="btnSave" class= 'action-btn'  style="display: none;" onclick="putAttendee()">Edit</button>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+
+  <script type="text/javascript" src="course.js"></script>
+</body>
+
+</html>
